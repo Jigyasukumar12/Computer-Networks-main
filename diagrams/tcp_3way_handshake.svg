@@ -1,0 +1,74 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="450" y="30" font-size="28" font-weight="bold" text-anchor="middle" fill="#000">TCP 3-Way Handshake (Connection Establishment)</text>
+  
+  <!-- Client and Server labels -->
+  <text x="150" y="100" font-size="18" font-weight="bold" fill="#FF6B6B">CLIENT</text>
+  <text x="750" y="100" font-size="18" font-weight="bold" fill="#4169E1">SERVER</text>
+  
+  <!-- Initial states -->
+  <rect x="80" y="110" width="140" height="40" fill="#FFE4E4" stroke="#FF6B6B" stroke-width="2"/>
+  <text x="150" y="135" font-size="12" text-anchor="middle">CLOSED</text>
+  
+  <rect x="680" y="110" width="140" height="40" fill="#E6F0FF" stroke="#4169E1" stroke-width="2"/>
+  <text x="750" y="135" font-size="12" text-anchor="middle">LISTEN</text>
+  
+  <!-- Vertical timeline -->
+  <line x1="150" y1="160" x2="150" y2="600" stroke="#FF6B6B" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="750" y1="160" x2="750" y2="600" stroke="#4169E1" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Step 1: SYN -->
+  <text x="450" y="210" font-size="14" font-weight="bold" text-anchor="middle" fill="#000">STEP 1: SYN (Synchronization)</text>
+  <line x1="150" y1="230" x2="750" y2="260" stroke="#FF6B6B" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <text x="420" y="245" font-size="12" fill="#000">SYN=1, Seq=x</text>
+  
+  <!-- Client state after step 1 -->
+  <rect x="80" y="290" width="140" height="40" fill="#FFE4E4" stroke="#FF6B6B" stroke-width="2"/>
+  <text x="150" y="315" font-size="12" text-anchor="middle">SYN_SENT</text>
+  
+  <!-- Server state after step 1 -->
+  <rect x="680" y="280" width="140" height="40" fill="#E6F0FF" stroke="#4169E1" stroke-width="2"/>
+  <text x="750" y="305" font-size="12" text-anchor="middle">SYN_RECEIVED</text>
+  
+  <!-- Step 2: SYN-ACK -->
+  <text x="450" y="380" font-size="14" font-weight="bold" text-anchor="middle" fill="#000">STEP 2: SYN-ACK (Server Response)</text>
+  <line x1="750" y1="340" x2="150" y2="370" stroke="#4169E1" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="380" y="358" font-size="12" fill="#000">SYN=1, ACK=1, Seq=y, Ack#=x+1</text>
+  
+  <!-- Step 3: ACK -->
+  <text x="450" y="450" font-size="14" font-weight="bold" text-anchor="middle" fill="#000">STEP 3: ACK (Client Acknowledgment)</text>
+  <line x1="150" y1="410" x2="750" y2="440" stroke="#FF6B6B" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <text x="420" y="428" font-size="12" fill="#000">ACK=1, Seq=x+1, Ack#=y+1</text>
+  
+  <!-- Final states -->
+  <rect x="80" y="470" width="140" height="50" fill="#FFD700" stroke="#FF6B6B" stroke-width="3"/>
+  <text x="150" y="495" font-size="12" text-anchor="middle" font-weight="bold">ESTABLISHED</text>
+  <text x="150" y="515" font-size="11" text-anchor="middle">Ready to transfer</text>
+  
+  <rect x="680" y="470" width="140" height="50" fill="#FFD700" stroke="#4169E1" stroke-width="3"/>
+  <text x="750" y="495" font-size="12" text-anchor="middle" font-weight="bold">ESTABLISHED</text>
+  <text x="750" y="515" font-size="11" text-anchor="middle">Ready to transfer</text>
+  
+  <!-- Why 3-way box -->
+  <rect x="50" y="560" width="800" height="120" fill="#FFFACD" stroke="#DAA520" stroke-width="2"/>
+  <text x="450" y="585" font-size="14" font-weight="bold" text-anchor="middle">WHY 3-WAY HANDSHAKE?</text>
+  
+  <text x="70" y="615" font-size="12">1. STEP 1 (SYN):    Client tells server "I'm starting communication" (seq=x)</text>
+  <text x="70" y="640" font-size="12">2. STEP 2 (SYN-ACK): Server confirms received (ack#=x+1) AND sends its own seq (seq=y)</text>
+  <text x="70" y="665" font-size="12">3. STEP 3 (ACK):      Client confirms received server's seq (ack#=y+1)</text>
+  
+  <!-- Result -->
+  <text x="450" y="700" font-size="11" text-anchor="middle" fill="#008000" font-weight="bold">
+    Result: Both sides agree on starting sequence numbers. No ambiguity. Connection ready.
+  </text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FF6B6B"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4169E1"/>
+    </marker>
+  </defs>
+</svg>

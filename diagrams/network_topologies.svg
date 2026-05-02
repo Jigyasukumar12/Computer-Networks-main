@@ -1,0 +1,127 @@
+<svg viewBox="0 0 1000 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="500" y="30" font-size="28" font-weight="bold" text-anchor="middle" fill="#000">Network Topologies Comparison</text>
+  
+  <!-- MESH TOPOLOGY -->
+  <text x="150" y="80" font-size="16" font-weight="bold" fill="#FF6B6B">1. MESH TOPOLOGY</text>
+  <circle cx="100" cy="120" r="8" fill="#FF6B6B"/><text x="100" y="155" font-size="12" text-anchor="middle">A</text>
+  <circle cx="200" cy="120" r="8" fill="#FF6B6B"/><text x="200" y="155" font-size="12" text-anchor="middle">B</text>
+  <circle cx="150" cy="200" r="8" fill="#FF6B6B"/><text x="150" y="235" font-size="12" text-anchor="middle">C</text>
+  <!-- Lines connecting all nodes -->
+  <line x1="100" y1="120" x2="200" y2="120" stroke="#000" stroke-width="2"/><line x1="100" y1="120" x2="150" y2="200" stroke="#000" stroke-width="2"/><line x1="200" y1="120" x2="150" y2="200" stroke="#000" stroke-width="2"/>
+  <text x="150" y="260" font-size="11" text-anchor="middle" fill="#000">Pros: Redundant, fault-tolerant</text>
+  <text x="150" y="280" font-size="11" text-anchor="middle" fill="#000">Cons: Expensive, complex (n(n-1)/2 links)</text>
+  
+  <!-- STAR TOPOLOGY -->
+  <text x="450" y="80" font-size="16" font-weight="bold" fill="#FFD700">2. STAR TOPOLOGY</text>
+  <circle cx="450" cy="120" r="10" fill="#FFD700"/><text x="450" y="150" font-size="12" text-anchor="middle" font-weight="bold">Hub</text>
+  <circle cx="350" cy="120" r="8" fill="#FFD700"/><text x="350" y="155" font-size="12" text-anchor="middle">A</text>
+  <circle cx="550" cy="120" r="8" fill="#FFD700"/><text x="550" y="155" font-size="12" text-anchor="middle">B</text>
+  <circle cx="450" cy="200" r="8" fill="#FFD700"/><text x="450" y="235" font-size="12" text-anchor="middle">C</text>
+  <!-- Lines to hub -->
+  <line x1="350" y1="120" x2="450" y2="120" stroke="#000" stroke-width="2"/><line x1="550" y1="120" x2="450" y2="120" stroke="#000" stroke-width="2"/><line x1="450" y1="200" x2="450" y2="130" stroke="#000" stroke-width="2"/>
+  <text x="450" y="260" font-size="11" text-anchor="middle" fill="#000">Pros: Easy setup, scalable</text>
+  <text x="450" y="280" font-size="11" text-anchor="middle" fill="#000">Cons: Single point of failure (hub)</text>
+  
+  <!-- RING TOPOLOGY -->
+  <text x="750" y="80" font-size="16" font-weight="bold" fill="#90EE90">3. RING TOPOLOGY</text>
+  <circle cx="700" cy="120" r="8" fill="#90EE90"/><text x="700" y="155" font-size="12" text-anchor="middle">A</text>
+  <circle cx="800" cy="120" r="8" fill="#90EE90"/><text x="800" y="155" font-size="12" text-anchor="middle">B</text>
+  <circle cx="750" cy="200" r="8" fill="#90EE90"/><text x="750" y="235" font-size="12" text-anchor="middle">C</text>
+  <!-- Ring lines -->
+  <path d="M 700 120 L 800 120 L 750 200 L 700 120" stroke="#000" stroke-width="2" fill="none"/>
+  <text x="750" y="260" font-size="11" text-anchor="middle" fill="#000">Pros: Equal access (token-based)</text>
+  <text x="750" y="280" font-size="11" text-anchor="middle" fill="#000">Cons: One break = network down</text>
+  
+  <!-- BUS TOPOLOGY -->
+  <text x="150" y="350" font-size="16" font-weight="bold" fill="#87CEEB">4. BUS TOPOLOGY</text>
+  <!-- Main backbone -->
+  <line x1="50" y1="400" x2="250" y2="400" stroke="#000" stroke-width="3"/>
+  <circle cx="80" cy="400" r="8" fill="#87CEEB"/><text x="80" y="435" font-size="12" text-anchor="middle">A</text>
+  <circle cx="150" cy="400" r="8" fill="#87CEEB"/><text x="150" y="435" font-size="12" text-anchor="middle">B</text>
+  <circle cx="220" cy="400" r="8" fill="#87CEEB"/><text x="220" y="435" font-size="12" text-anchor="middle">C</text>
+  <text x="150" y="470" font-size="11" text-anchor="middle" fill="#000">Pros: Simple, cheap</text>
+  <text x="150" y="490" font-size="11" text-anchor="middle" fill="#000">Cons: One break = all down, collisions</text>
+  
+  <!-- TREE TOPOLOGY -->
+  <text x="450" y="350" font-size="16" font-weight="bold" fill="#9370DB">5. TREE (Hierarchical)</text>
+  <circle cx="450" cy="380" r="8" fill="#9370DB"/><text x="450" y="415" font-size="10" text-anchor="middle" font-weight="bold">Root</text>
+  <circle cx="350" cy="480" r="8" fill="#9370DB"/><text x="350" y="515" font-size="10" text-anchor="middle">H1</text>
+  <circle cx="550" cy="480" r="8" fill="#9370DB"/><text x="550" y="515" font-size="10" text-anchor="middle">H2</text>
+  <circle cx="300" cy="560" r="6" fill="#9370DB"/><text x="300" y="590" font-size="10" text-anchor="middle">N1</text>
+  <circle cx="400" cy="560" r="6" fill="#9370DB"/><text x="400" y="590" font-size="10" text-anchor="middle">N2</text>
+  <line x1="450" y1="388" x2="350" y2="480" stroke="#000" stroke-width="2"/><line x1="450" y1="388" x2="550" y2="480" stroke="#000" stroke-width="2"/><line x1="350" y1="488" x2="300" y2="560" stroke="#000" stroke-width="2"/><line x1="350" y1="488" x2="400" y2="560" stroke="#000" stroke-width="2"/>
+  <text x="450" y="620" font-size="11" text-anchor="middle" fill="#000">Pros: Hierarchical, scalable</text>
+  <text x="450" y="640" font-size="11" text-anchor="middle" fill="#000">Cons: Root is critical point</text>
+  
+  <!-- POINT-TO-POINT -->
+  <text x="750" y="350" font-size="16" font-weight="bold" fill="#FF8C8C">6. POINT-TO-POINT</text>
+  <circle cx="700" cy="400" r="8" fill="#FF8C8C"/><text x="700" y="435" font-size="12" text-anchor="middle">A</text>
+  <circle cx="800" cy="400" r="8" fill="#FF8C8C"/><text x="800" y="435" font-size="12" text-anchor="middle">B</text>
+  <line x1="708" y1="400" x2="792" y2="400" stroke="#000" stroke-width="2"/>
+  <text x="750" y="470" font-size="11" text-anchor="middle" fill="#000">Pros: Direct, secure, fastest</text>
+  <text x="750" y="490" font-size="11" text-anchor="middle" fill="#000">Cons: Only 2 nodes, not scalable</text>
+  
+  <!-- Summary Table -->
+  <rect x="50" y="560" width="900" height="300" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="500" y="590" font-size="14" font-weight="bold" text-anchor="middle">Topology Comparison Summary</text>
+  
+  <!-- Table headers -->
+  <line x1="50" y1="600" x2="950" y2="600" stroke="#000" stroke-width="1"/>
+  <text x="90" y="620" font-size="12" font-weight="bold">Topology</text>
+  <text x="200" y="620" font-size="12" font-weight="bold"># Links</text>
+  <text x="310" y="620" font-size="12" font-weight="bold">Hosts/Device</text>
+  <text x="470" y="620" font-size="12" font-weight="bold">Best For</text>
+  <text x="700" y="620" font-size="12" font-weight="bold">Fault Tolerance</text>
+  
+  <line x1="50" y1="630" x2="950" y2="630" stroke="#000" stroke-width="1"/>
+  
+  <!-- Mesh row -->
+  <text x="90" y="650" font-size="11">Mesh</text>
+  <text x="200" y="650" font-size="11">n(n-1)/2</text>
+  <text x="310" y="650" font-size="11">All connected</text>
+  <text x="470" y="650" font-size="11">Military/critical</text>
+  <text x="700" y="650" font-size="11">Excellent</text>
+  <line x1="50" y1="660" x2="950" y2="660" stroke="#CCC" stroke-width="1"/>
+  
+  <!-- Star row -->
+  <text x="90" y="680" font-size="11">Star</text>
+  <text x="200" y="680" font-size="11">n-1</text>
+  <text x="310" y="680" font-size="11">Central hub</text>
+  <text x="470" y="680" font-size="11">Modern LANs</text>
+  <text x="700" y="680" font-size="11">Good</text>
+  <line x1="50" y1="690" x2="950" y2="690" stroke="#CCC" stroke-width="1"/>
+  
+  <!-- Ring row -->
+  <text x="90" y="710" font-size="11">Ring</text>
+  <text x="200" y="710" font-size="11">n</text>
+  <text x="310" y="710" font-size="11">Circular</text>
+  <text x="470" y="710" font-size="11">Token Ring</text>
+  <text x="700" y="710" font-size="11">Fair</text>
+  <line x1="50" y1="720" x2="950" y2="720" stroke="#CCC" stroke-width="1"/>
+  
+  <!-- Bus row -->
+  <text x="90" y="740" font-size="11">Bus</text>
+  <text x="200" y="740" font-size="11">1</text>
+  <text x="310" y="740" font-size="11">Shared cable</text>
+  <text x="470" y="740" font-size="11">Legacy LANs</text>
+  <text x="700" y="740" font-size="11">Poor</text>
+  <line x1="50" y1="750" x2="950" y2="750" stroke="#CCC" stroke-width="1"/>
+  
+  <!-- Tree row -->
+  <text x="90" y="770" font-size="11">Tree</text>
+  <text x="200" y="770" font-size="11">n-1</text>
+  <text x="310" y="770" font-size="11">Hierarchical</text>
+  <text x="470" y="770" font-size="11">Large networks</text>
+  <text x="700" y="770" font-size="11">Good</text>
+  <line x1="50" y1="780" x2="950" y2="780" stroke="#CCC" stroke-width="1"/>
+  
+  <!-- P2P row -->
+  <text x="90" y="800" font-size="11">P2P</text>
+  <text x="200" y="800" font-size="11">1</text>
+  <text x="310" y="800" font-size="11">2 nodes</text>
+  <text x="470" y="800" font-size="11">Point links</text>
+  <text x="700" y="800" font-size="11">N/A</text>
+  
+  <line x1="50" y1="810" x2="950" y2="810" stroke="#000" stroke-width="2"/>
+</svg>

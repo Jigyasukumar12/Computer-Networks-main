@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="30" font-size="28" font-weight="bold" text-anchor="middle" fill="#000">OSI Reference Model (7 Layers)</text>
+  
+  <!-- Layer 7 -->
+  <rect x="50" y="70" width="700" height="100" fill="#FF6B6B" stroke="#000" stroke-width="2"/>
+  <text x="400" y="110" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFF">Layer 7: APPLICATION</text>
+  <text x="400" y="140" font-size="14" text-anchor="middle" fill="#FFF">HTTP, HTTPS, FTP, SMTP, DNS, Telnet, SNMP</text>
+  <text x="400" y="160" font-size="12" text-anchor="middle" fill="#FFF">Data Unit: Message</text>
+  
+  <!-- Layer 6 -->
+  <rect x="50" y="180" width="700" height="100" fill="#FF8C8C" stroke="#000" stroke-width="2"/>
+  <text x="400" y="220" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFF">Layer 6: PRESENTATION</text>
+  <text x="400" y="250" font-size="14" text-anchor="middle" fill="#FFF">Encryption, Compression, Formatting (SSL/TLS)</text>
+  <text x="400" y="270" font-size="12" text-anchor="middle" fill="#FFF">Data Unit: Data</text>
+  
+  <!-- Layer 5 -->
+  <rect x="50" y="290" width="700" height="100" fill="#FFA07A" stroke="#000" stroke-width="2"/>
+  <text x="400" y="330" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFF">Layer 5: SESSION</text>
+  <text x="400" y="360" font-size="14" text-anchor="middle" fill="#FFF">Dialogue Control, Connection Management</text>
+  <text x="400" y="380" font-size="12" text-anchor="middle" fill="#FFF">Data Unit: Data</text>
+  
+  <!-- Layer 4 -->
+  <rect x="50" y="400" width="700" height="100" fill="#FFD700" stroke="#000" stroke-width="2"/>
+  <text x="400" y="440" font-size="20" font-weight="bold" text-anchor="middle" fill="#000">Layer 4: TRANSPORT</text>
+  <text x="400" y="470" font-size="14" text-anchor="middle" fill="#000">TCP (reliable), UDP (fast), Port-based delivery</text>
+  <text x="400" y="490" font-size="12" text-anchor="middle" fill="#000">Data Unit: Segment</text>
+  
+  <!-- Layer 3 -->
+  <rect x="50" y="510" width="700" height="100" fill="#90EE90" stroke="#000" stroke-width="2"/>
+  <text x="400" y="550" font-size="20" font-weight="bold" text-anchor="middle" fill="#000">Layer 3: NETWORK</text>
+  <text x="400" y="580" font-size="14" text-anchor="middle" fill="#000">Routing, IP Addressing, Forwarding</text>
+  <text x="400" y="600" font-size="12" text-anchor="middle" fill="#000">Data Unit: Packet | Device: Router</text>
+  
+  <!-- Layer 2 -->
+  <rect x="50" y="620" width="700" height="100" fill="#87CEEB" stroke="#000" stroke-width="2"/>
+  <text x="400" y="660" font-size="20" font-weight="bold" text-anchor="middle" fill="#000">Layer 2: DATA LINK</text>
+  <text x="400" y="690" font-size="14" text-anchor="middle" fill="#000">MAC, Framing, Error Detection (CRC)</text>
+  <text x="400" y="710" font-size="12" text-anchor="middle" fill="#000">Data Unit: Frame | Device: Switch, Bridge</text>
+  
+  <!-- Layer 1 -->
+  <rect x="50" y="730" width="700" height="100" fill="#9370DB" stroke="#000" stroke-width="2"/>
+  <text x="400" y="770" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFF">Layer 1: PHYSICAL</text>
+  <text x="400" y="800" font-size="14" text-anchor="middle" fill="#FFF">Cables, Signals, Encoding, Topology</text>
+  <text x="400" y="820" font-size="12" text-anchor="middle" fill="#FFF">Data Unit: Bit | Device: Hub, Repeater, NIC</text>
+  
+  <!-- Mnemonic -->
+  <text x="50" y="860" font-size="12" fill="#000" font-style="italic">Mnemonic: "All People Seem To Need Data Processing"</text>
+</svg>
