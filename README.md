@@ -238,4 +238,3 @@ Each unit file contains:
 ---
 
 **Last Updated:** April 24, 2026  
-**Exam Code:** KCS603  
