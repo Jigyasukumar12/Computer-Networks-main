@@ -237,4 +237,3 @@ Each unit file contains:
 
 ---
 
-**Last Updated:** 
